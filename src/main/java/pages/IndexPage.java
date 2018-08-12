@@ -1,6 +1,7 @@
 package pages;
 
 import assertions.AddToCartAssertion;
+import assertions.IndexAssertion;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,7 @@ import java.util.Random;
 public class IndexPage extends MainPage {
 
     public AddToCartAssertion addToCartAssertion;
+    public IndexAssertion indexAssertion;
 
     String url = "http://automationpractice.com";
 
@@ -33,11 +35,11 @@ public class IndexPage extends MainPage {
     @FindBy(css = "[class='login']")
     private WebElement signInButton;
 
-
     public IndexPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
         addToCartAssertion = new AddToCartAssertion(driver);
+        indexAssertion = new IndexAssertion(driver);
     }
 
     public IndexPage openIndexPage() {

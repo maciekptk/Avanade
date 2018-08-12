@@ -36,5 +36,4 @@ public class Zajecia1Test {
 
         driver.quit();
     }
-
 }
